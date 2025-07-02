@@ -3,20 +3,14 @@ run kubernetes dashboard in codespace
 
 TLDR;
 
-```
+```bash
 pip install ansible kubernetes
 ansible-playbook up.yml
-kubectl get pods
+kubectl -n default port-forward deployment/dashboard-kong 8443:8443
 ```
-Then with the 0th pod, dashboard-kong-68687498db-5jk5m in my case run:
-
-```
-kubectl -n default port-forward dashboard-kong-68687498db-5jk5m 8443:8443
-```
-
 You will need a bearer token to access the dashboard. Open a 2nd terminal window and run:
 
-```
+```bash
 kubectl -n default create token admin-user
 ```
 
