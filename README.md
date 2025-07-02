@@ -4,7 +4,7 @@ run kubernetes dashboard in codespace
 TLDR;
 
 ```
-pip install -r requirements.txt
+pip install ansible kubernetes
 ansible-playbook up.yml
 kubectl get pods
 ```
