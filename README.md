@@ -5,7 +5,7 @@ TLDR;
 
 ```
 pip install -r requirements.txt
-ansible-playbook playbook.yml
+ansible-playbook up.yml
 kubectl get pods
 ```
 Then with the 0th pod, dashboard-kong-68687498db-5jk5m in my case run:
@@ -22,9 +22,8 @@ kubectl -n default create token admin-user
 
 If you need to delete a cluster and start over you can run:
 
-```
-k3d cluster delete local-k8s
-rm -rf ~/.kube
+```bash
+ansible-playbook down.yml
 ```
 
 Then you can take it from the top.

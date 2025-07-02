@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: localhost
   tasks:
   - name: download k3d
     ansible.builtin.command: curl https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh -o /tmp/installk3d.sh
