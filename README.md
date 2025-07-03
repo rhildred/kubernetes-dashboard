@@ -4,7 +4,7 @@ run kubernetes dashboard in codespace
 TLDR;
 
 ```bash
-pip install ansible kubernetes
+pip install ansible kubernetes # install ansible python3-kubernetes with package manager python
 ansible-playbook up.yml
 kubectl -n default port-forward deployment/dashboard-kong 8000:8000
 ```
