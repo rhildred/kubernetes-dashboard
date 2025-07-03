@@ -1,4 +1,4 @@
-# INFO8995-observability
+# Kubernetes Dashboard
 run kubernetes dashboard in codespace
 
 TLDR;
@@ -6,7 +6,7 @@ TLDR;
 ```bash
 pip install ansible kubernetes
 ansible-playbook up.yml
-kubectl -n default port-forward deployment/dashboard-kong 8443:8443
+kubectl -n default port-forward deployment/dashboard-kong 8000:8000
 ```
 You will need a bearer token to access the dashboard. Open a 2nd terminal window and run:
 
